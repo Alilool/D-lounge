@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mozilla Headline', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+nav {
+    background-color: #1f1f1f;
+}
+
+nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav img {
+    width: 125px;
+    margin: 20px;
+    display: block;
+}
+
+
+main {
+    width: 600px;
+    max-width: 95%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+ul {
+    list-style: none;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    button:hover {
+        background-color: #505050;
+        transform: scale(1.05);
+    }
+}
+
+
+button:active {
+    background-color: #505050;
+    transform: scale(1.05);
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu {
+    width: 98%;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu:hover {
+    transform: scale(1.02);
+}
+
+li>div {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeIn 0.5s ease;
+}
+
+#overlayImage {
+    max-height: 90%;
+    max-width: 90%;
+    border-radius: 8px;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fade-up {
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.fade-down {
+    animation: fadeDown 0.5s ease-out forwards;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+footer img {
+    width: 200px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    gap: 80px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a {
+    cursor: pointer;
+}
+
+.footer-social img {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+.footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+footer a {
+    color: #cccccc
+}
+
+
+iframe {
+    width: 400px;
+    height: 230px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 700px) {
+    iframe {
+        width: 300px;
+    }
+
+    .footer-container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 400px;
+    }
+
+    #overlayImage {
+        max-width: 90%;
+        max-height: 80%;
+    }
+
+    iframe {
+        width: 250px;
+    }
+
+    .footer-social {
+        gap: 5px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    iframe {
+        width: 200px;
+    }
+
+
+}
