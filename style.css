@@ -191,6 +191,11 @@ footer {
     gap: 20px;
 }
 
+.prizeNote {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.3em;
+}
+
 footer img {
     width: 200px;
 }
